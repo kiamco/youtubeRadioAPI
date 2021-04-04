@@ -7,11 +7,14 @@ from games import Games
 from flask_restful import Api
 from dotenv import load_dotenv
 import os
+from flask_cors import CORS
+
 
 load_dotenv()  
 
 app = Flask(__name__)
 api = Api(app)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 api.add_resource(Games, '/gaming')
 api.add_resource(Food, '/food')
