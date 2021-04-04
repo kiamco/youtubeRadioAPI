@@ -6,9 +6,6 @@ import googleapiclient.discovery
 from flask_restful import Api, Resource
 from dotenv import load_dotenv
 
-
-
-
 class Comedy(Resource):
     def get(self):
         # Disable OAuthlib's HTTPS verification when running locally.

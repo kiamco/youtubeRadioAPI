@@ -6,8 +6,6 @@ import googleapiclient.discovery
 from flask_restful import Api, Resource
 from dotenv import load_dotenv
 
-
-
 class Games(Resource):
     def get(self):
         # Disable OAuthlib's HTTPS verification when running locally.
@@ -25,7 +23,7 @@ class Games(Resource):
         part="snippet",
         maxResults=50,
         order="viewCount",
-        regionCode="US",
+        regionCode="US",    
         type="video",
         videoCategoryId="20"
         )
