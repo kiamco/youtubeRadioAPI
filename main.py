@@ -14,7 +14,7 @@ load_dotenv()
 
 app = Flask(__name__)
 api = Api(app)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app, support_credentials=True)
 
 api.add_resource(Games, '/gaming')
 api.add_resource(Food, '/food')

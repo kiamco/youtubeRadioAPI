@@ -29,5 +29,7 @@ class Comedy(Resource):
         )
         response = request.execute()
 
+        
+
         return response
 
